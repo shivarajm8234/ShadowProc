@@ -5,6 +5,21 @@ PPID-X is a real-time OS Process Threat Intelligence system. It monitors system 
 
 ![PPID-X Architecture Diagram](/home/kiyotoka/.gemini/antigravity/brain/91ec02bb-182c-4ab8-bbf3-e820a2a8c496/ppid_x_architecture_diagram_1767840770018.png)
 
+### Architecture Flow (Mermaid)
+```mermaid
+graph TD
+    A[OS Kernel] -->|Raw Process Data| B(Data Collector / monitor.py)
+    B -->|Pandas DataFrame| C{Threat Analyzer / analyzer.py}
+    C -->|Detect Privilege Escalation| D[Risk Scoring Engine]
+    C -->|Detect Suspicious Paths| D
+    D -->|Ranked Risk Data| E[Streamlit Dashboard / app.py]
+    E -->|Interactive Viz| F[Lineage Tree / visualizer.py]
+    E -->|Alerts| G[Risk Report UI]
+    style C fill:#bbf,stroke:#333
+    style D fill:#f96,stroke:#333
+    style F fill:#9f9,stroke:#333
+```
+
 ## 1. System Components
 The project is modularized into four key components:
 
