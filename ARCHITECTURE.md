@@ -3,6 +3,8 @@
 ## Overview
 PPID-X is a real-time OS Process Threat Intelligence system. It monitors system processes, constructs a parent-child lineage tree, and applies heuristic analysis to detect security risks like privilege escalation, malware masquerading, and resource abuse.
 
+![PPID-X Architecture Diagram](/home/kiyotoka/.gemini/antigravity/brain/91ec02bb-182c-4ab8-bbf3-e820a2a8c496/ppid_x_architecture_diagram_1767840770018.png)
+
 ## 1. System Components
 The project is modularized into four key components:
 
